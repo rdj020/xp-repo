@@ -1,0 +1,108 @@
+":" #used as separator
+# Five basic atomic classes of objects of R:
+character
+numeric
+integer
+complex
+logical
+
+Vector is most basic object 
+
+> vector() ## vector("Numeric"), length = 10) default all values zero
+
+
+
+numbers are treated as numeric/double objects, to specify integer suffix "L"
+
+special number "Inf" infinity
+
+NaN is Not defined value
+
+# R objects have attributes:
+names
+dimensions
+class
+length
+user-defined attributes/metadata
+
+> attributes()
+
+> c() ## Concatenate 
+
+
+FALSE = 0
+TRUE = 1 (and everything above 1)
+
+when different objects are mixed in a vector, coercion occurs so that every element in the vector is of the same class
+
+conversion: 
+
+as.numeric()
+as.logical()
+as.character()
+
+
+Lists:
+> list() ## list(1, "a", TRUE, 1 + 4i)
+
+Matrices:
+vectors with a dimension attrbitute
+> matrix(1:6, nrow = 2, ncol = 3)
+
+creating matrix from vector:
+> m <- 1:10
+> dim(m) <- c(2,5)
+
+
+> cbind(x, y) ## col first
+> rbind(x, y) ## row first
+
+
+Factors are categorical data representations, ordered or unordered
+
+> glm()
+> lm()
+
+ordering levels using level arugment in factor():
+
+> factor(c("yes", "no", "yes", "yes", "no")),
+	levels = c("yes", "no")
+
+Missing Values: NA or NaN
+
+> is.na() ## test objects for NA
+> is.nan() ## test for NaN
+
+NA can have a class also: integer NA, character NA etc
+NaN is also NA but the converse is not true
+
+Data Frames:
+tabular data, every element has the same length
+
+> data.frame(foo = 1:4, bar = c(T, T, F, T))
+
+
+row.names
+> read.table()
+> read.csv()
+> data.matrix()
+
+> nrow()
+> ncol ()
+
+R objects can have names
+> names()
+> names(x) <- c("foo" , "barf", "norf")
+
+> dimnames()
+
+
+
+
+
+
+
+
+
+
+
